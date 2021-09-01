@@ -1,0 +1,20 @@
+{
+  "name": "native",
+  "version": "0.1.0",
+  "description": "windows native module",
+  "main": "native.node",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc native.node -- cargo build --message-format=json-render-diagnostics",
+    "install": "npm run build",
+    "test": "cargo test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cargo-cp-artifact": "^0.1"
+  },
+  "dependencies": {
+    "build": "^0.1.4"
+  }
+}

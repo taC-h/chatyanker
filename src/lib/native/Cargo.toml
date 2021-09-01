@@ -1,0 +1,19 @@
+[package]
+name = "native"
+version = "0.1.0"
+description = "windows native module"
+license = "MIT"
+edition = "2018"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+windows = "0.18.0"
+bindings = { path = "bindings"}
+
+[dependencies.neon]
+version = "0.9"
+default-features = false
+features = ["napi-6"]
